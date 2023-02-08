@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "0486cc07-7e71-4eae-8772-e64a1c4e7268",
+		"name": "Introduccion APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23676580"
+	},
+	"item": [
+		{
+			"name": "Crear Persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Nuevo\",\n    \"usuario\": \"nuevo2\",\n    \"fechaRegistro\": \"2023-06-06\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPersonas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPersonas By Nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/personas/nombre/Nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"personas",
+						"nombre",
+						"Nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPersona By Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/personas/usuario/nuevo1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"personas",
+						"usuario",
+						"nuevo1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExisteUsuario By Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/personas/usuario/existe/nuevo1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"personas",
+						"usuario",
+						"existe",
+						"nuevo1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarPersona By ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"nombre\": \"Nuevo actualizado\",\n    \"usuario\": \"usuarioActualizado1\",\n    \"fechaRegistro\": \"2022-06-06\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persona/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persona",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarPersona By Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":2,\n    \"nombre\": \"Nuevo actualizado2\",\n    \"usuario\": \"usuarioActualizado2\",\n    \"fechaRegistro\": \"2022-06-06\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persona/usuario/nuevo2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persona",
+						"usuario",
+						"nuevo2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPersona By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/persona/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persona",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPersona By Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/persona/usuario/nuevo1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persona",
+						"usuario",
+						"nuevo1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
